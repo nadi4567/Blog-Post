@@ -11,6 +11,11 @@ mongoose.connect(`mongodb+srv://Nadi78:${password}@cluster0.jkndiqj.mongodb.net/
   useNewUrlParser: true,
   useUnifiedTopology: true 
 });
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error: "));
+db.once("open", function () {
+  console.log("Connected successfully");
+});
 // create a post Schema
 const postSchema = {
   title:{
@@ -24,7 +29,12 @@ const Post = mongoose.model("Post",postSchema);
 
 
 const homeStartingContent = "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.";
-const aboutContent = "We created this to upload post whatever you like.If you want to uplod about health , put the title about Health and write everything corresponding to the title you put in the content box."
+const aboutContent = `We created this coding blog website
+in order to learn programming concepts or write our feelings and quotes on day to day basics.
+Everybody has elgibility to write blog corresponding to programming , feelings, quotes to share your knowledge.
+In order to post , you have to go post page by clicking post route.
+     
+`
 const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
 
 const app = express();
