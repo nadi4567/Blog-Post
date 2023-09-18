@@ -43,17 +43,21 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-app.get("/",(req,res)=>{
-  Post.find({}).then(posts=>{
-    console.log(posts)
-    res.render("home",{
-      startingContent:homeStartingContent,
-      posts:posts
-      });
-  })
-   
-   // console.log(contentData)
+app.get("/", async (req, res) => {
+  try {
+    const posts = await Post.find({});
+    console.log(posts);
+    res.render("home", {
+      startingContent: homeStartingContent,
+      posts: posts,
+    });
+  } catch (error) {
+    console.error(error);
+    // Handle the error appropriately, e.g., send an error response to the client
+    res.status(500).send("Internal Server Error");
+  }
 });
+
 app.get("/about",(req,res)=>{
   res.render("about",{about : aboutContent})
 });
