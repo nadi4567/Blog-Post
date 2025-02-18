@@ -1,6 +1,10 @@
  🚀 "Daily Journal ON"
 
-This is a simple blog website where users can create, read, and view blog posts. The website is built using Node.js, Express.js, MongoDB, and EJS as the templating engine.
+This is a simple blog website where users can create, read, and view blog posts.
+The website is built using Node.js, Express.js, MongoDB, and EJS as the templating engine.
+
+- Live at https://journaling-yocy.onrender.com/
+- You can test my blog website here "https://journaling-yocy.onrender.com/". I use onrender to host my website.
 
  🚀 Features
 - Home page displaying all blog posts
