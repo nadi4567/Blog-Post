@@ -12,13 +12,13 @@ The website is built using Node.js, Express.js, MongoDB, and EJS as the templati
 - View individual blog posts
 - About and Contact pages
 
-  ✅ Technologies Used
--  Node.js - JavaScript runtime
--  Express.js - Web framework for Node.js
--  MongoDB - Database for storing blog posts
--  EJS - Templating engine for rendering dynamic views
--  Lodash - Utility library for string manipulation
--  dotenv - For managing environment variables
+   Technologies Used
+  ✅  Node.js - JavaScript runtime
+  ✅ Express.js - Web framework for Node.js
+  ✅ MongoDB - Database for storing blog posts
+  ✅ EJS - Templating engine for rendering dynamic views
+  ✅ Lodash - Utility library for string manipulation
+  ✅ dotenv - For managing environment variables
 
 
  🚀 Installation
